@@ -1,0 +1,423 @@
+@import url(./reset.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+
+$main__font-family: "Pretendard";
+
+$main__point-color: #1187e2;
+$main__font-color: #464646;
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  word-wrap: break-word;
+  word-break: keep-all;
+  text-align: center;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  color: $main__font-color;
+  font: {
+    family: $main__font-family;
+    size: 16px;
+  }
+}
+
+.inner {
+  max-width: 1718px;
+  margin: 0 auto;
+  height: auto;
+}
+
+// --------------------menu start----------------------
+.hidden {
+  display: none;
+}
+.menu {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+  &__top {
+    width: 100%;
+    height: 93px;
+  }
+  &__logo {
+    width: 149px;
+    height: 69px;
+  }
+  &__close {
+    cursor: pointer;
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    }
+  }
+  &__content {
+    text-align: left;
+    .inner {
+      display: flex;
+      height: calc(100vh - 200px);
+    }
+  }
+  &__list {
+    a {
+      color: #5b5b5b;
+      li {
+        margin-top: 40px;
+        font-size: 50px;
+        font-weight: 800;
+      }
+    }
+  }
+  &__address {
+    line-height: 26px;
+    &::before {
+      content: "";
+      display: block;
+      width: 145px;
+      height: 1px;
+      background-color: $main__point-color;
+      margin-bottom: 32px;
+    }
+  }
+}
+// --------------------menu end----------------------
+
+// --------------------nav start----------------------
+.nav {
+  width: 100%;
+  height: 93px;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+  &__logo {
+    width: 149px;
+    height: 69px;
+  }
+  &__menu {
+    cursor: pointer;
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    }
+  }
+}
+.fixed__nav-space {
+  width: 100%;
+  height: 93px;
+}
+// --------------------nav end----------------------
+
+// --------------------main start----------------------
+.main {
+  width: 100%;
+  height: 100vh;
+  &__title-container {
+    .inner {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-bottom: 120px;
+    }
+  }
+  &__title {
+    color: $main__point-color;
+    margin-top: 16px;
+    font-size: 54px;
+    font-weight: 700;
+  }
+  &__text {
+    line-height: 26px;
+    margin-top: 20px;
+    width: 514px;
+  }
+  &__slide {
+    width: 100%;
+    height: 619px;
+    background-color: $main__point-color;
+    margin-top: 37px;
+  }
+}
+// --------------------main end----------------------
+
+// --------------------vision start----------------------
+.vision {
+  .inner {
+    padding-bottom: 241px;
+    height: 100%;
+  }
+  &__title-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__vision {
+    font-size: 20px;
+    color: $main__point-color;
+    font-weight: 600;
+  }
+  &__title {
+    color: #172b3a;
+    margin-top: 11px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  &__text {
+    line-height: 26px;
+    margin-top: 11px;
+  }
+  &__btn {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 204px;
+    height: 50px;
+    background-color: $main__point-color;
+    border: none;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 159px;
+    &-container {
+      width: 598px;
+      height: 342px;
+      border-radius: 191px;
+      opacity: 0.9;
+      line-height: 30px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.26);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:nth-of-type(1) {
+        background-color: white;
+        color: $main__font-color;
+        position: absolute;
+        left: 0;
+      }
+      &:nth-of-type(2) {
+        background-color: #757575;
+        color: white;
+      }
+      &:nth-of-type(3) {
+        background-color: #1187e2;
+        color: white;
+        position: absolute;
+        right: 0;
+      }
+    }
+    &-text {
+      width: 190px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+}
+// --------------------vision end----------------------
+
+// --------------------products start----------------------
+.products {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background : {
+    image: url(../img/products__bg.png);
+    size: cover;
+    position: center;
+  }
+  .inner {
+    height: 100%;
+    padding-top: 127px;
+    padding-bottom: 204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title-container {
+    text-align: left;
+  }
+  &__products {
+    font-size: 20px;
+  }
+  &__title {
+    font-size: 32px;
+    margin-top: 23px;
+    font-weight: 600;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    margin-top: 94px;
+    max-width: 1144px;
+
+    a {
+      color: white;
+    }
+  }
+  &__card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 266px;
+    height: 210px;
+    border: 2px solid white;
+    border-radius: 0 25px 0 25px;
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    &-text {
+      text-align: left;
+    }
+    &-title {
+      font-size: 22px;
+    }
+    &-detail {
+      margin-top: 10px;
+    }
+    &-icon {
+      align-self: flex-end;
+      img {
+        width: 65px;
+        height: auto;
+      }
+    }
+  }
+}
+// --------------------products end----------------------
+
+// --------------------footer start----------------------
+.footer {
+  width: 100%;
+  height: 543px;
+  color: white;
+  background-color: $main__point-color;
+  .inner {
+    padding: 100px 0;
+  }
+  &__title {
+    font-size: 54px;
+    line-height: 78px;
+    font-weight: 700;
+    text-align: left;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-left {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    &-right {
+      line-height: 38px;
+      text-align: right;
+      display: flex;
+      align-items: flex-end;
+      &--menu {
+        margin-right: 147px;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+// --------------------footer end----------------------
+
+// --------------------product page start----------------------
+.product__page {
+  width: 100%;
+  height: 100%;
+  &-title {
+    color: #172b3a;
+    &--top {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    &--bottom {
+      margin-top: 18px;
+    }
+  }
+  &-menu {
+    margin-top: 59px;
+  }
+}
+.tabmenu__card {
+  width: calc(100% / 4);
+  height: 365px;
+  border: 1px solid red;
+}
+.tabmenu__card-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tabmenu ul {
+  // max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.tabmenu ul li {
+  text-align: center;
+  background: #f9f9f9;
+  margin-right: 60px;
+}
+.tabmenu ul li a {
+  display: block;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000;
+}
+.tabCon {
+  display: none;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  border: 5px solid #461dff;
+
+  width: 100%;
+  height: auto;
+}
+.btnCon:target {
+  background: #ccc;
+}
+.btnCon:target .tabCon {
+  display: block;
+}
+// --------------------product page end----------------------
