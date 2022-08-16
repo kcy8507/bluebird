@@ -1,23 +1,12 @@
-$(document).ready(function () {
-  $(".nav__menu").click(function () {
-    $(".menu").toggle(".hidden");
-    $("html").css("overflow", "hidden");
-  });
-  $(".menu__close").click(function () {
-    $(".menu").toggle(".hidden");
-    $("html").css("overflow", "scroll");
-  });
+let navMenu = document.querySelector(".menu");
+let menuOpenBtn = document.querySelector(".nav__menu");
+let menuCloseBtn = document.querySelector(".menu__close");
+menuOpenBtn.addEventListener("click", function () {
+  navMenu.style.display = "block";
 });
-
-// $(document).ready(function () {
-//   $(".nav__menu").click(function () {
-//     if ($(".nav__menu").hasClass("hidden")) {
-//       $("h1").removeClass("active");
-//     } else {
-//       $("h1").addClass("active");
-//     }
-//   });
-// });
+menuCloseBtn.addEventListener("click", function () {
+  navMenu.style.display = "none";
+});
 
 let menuEls = document.querySelectorAll(".tabmenu  li");
 let menuEl = [...menuEls];

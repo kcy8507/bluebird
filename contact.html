@@ -20,24 +20,24 @@
     <section class="menu hidden">
         <div class="menu__top">
             <div class="inner">
-                <a href="#">
+                <a href="./index.html">
                     <div class="menu__logo"><img src="./img/logo.png" alt=""></div>
                 </a>
                 <div class="menu__close">
-                    <span class="material-symbols-outlined">close</span>
+                    <img src="./img/nav__close.png" alt="">
                 </div>
             </div>
         </div>
         <div class="menu__content">
             <div class="inner">
                 <ul class="menu__list">
-                    <a href="about.html">
+                    <a href="./about.html">
                         <li>About</li>
                     </a>
-                    <a href="product__page.html">
+                    <a href="./product__page.html">
                         <li>Products</li>
                     </a>
-                    <a href="notice.html">
+                    <a href="./notice.html">
                         <li>FAQ</li>
                     </a>
                     <a href="#">
@@ -61,9 +61,7 @@
             <a href="index.html">
                 <div class="nav__logo"><img src="./img/logo.png" alt=""></div>
             </a>
-            <div class="nav__menu"><span class="material-symbols-outlined">
-                    menu
-                </span></div>
+            <div class="nav__menu"><img src="./img/nav__btn.png" alt=""></div>
         </div>
     </nav>
     <section class="contact">
@@ -86,7 +84,28 @@
                 </div>
             </div>
             <hr>
-            <div class="contact__box"></div>
+            <div id="contact__box"></div>
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6bb8e8c9b35d5da7a2a741d0079743ae"></script>
+            <script>
+                var mapContainer = document.getElementById('contact__box'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                // 마커가 표시될 위치입니다 
+                var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition
+                });
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
+                        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+                        // marker.setMap(null);    
+            </script>
+
         </div>
     </section>
     <section class="footer">
@@ -97,20 +116,20 @@
                     Winning together</div>
                 <div class="footer__content">
                     <div class="footer__content-left">
-                        2022 copyright BLUE BIRD<br>
+                        2022 copyright BLUE BIRD
                         All RIghts Reserved</div>
                     <div class="footer__content-right">
                         <ul class="footer__content-right--menu">
-                            <a href="#">
+                            <a href="./about.html">
                                 <li>About</li>
                             </a>
-                            <a href="#">
+                            <a href="./product__page.html">
                                 <li>Products</li>
                             </a>
-                            <a href="#">
+                            <a href="./notice.html">
                                 <li>FAQ</li>
                             </a>
-                            <a href="#">
+                            <a href="./contact.html">
                                 <li>Contact</li>
                             </a>
                             <a href="#">
