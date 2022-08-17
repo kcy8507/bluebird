@@ -46,7 +46,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 99;
-  overflow-y: hidden;
+  overflow: hidden;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -105,7 +105,7 @@ body {
 // --------------------nav start----------------------
 .nav {
   width: 100%;
-  height: 93px;
+  height: 9.3rem;
   position: fixed;
   background-color: white;
   z-index: 1;
@@ -116,8 +116,8 @@ body {
     padding: 1.2rem 3rem;
   }
   &__logo {
-    width: 149px;
-    height: 69px;
+    width: 14.9rem;
+    height: 6.9rem;
   }
   &__menu {
     cursor: pointer;
@@ -129,7 +129,7 @@ body {
 }
 .fixed__nav-space {
   width: 100%;
-  height: 93px;
+  height: 9.3rem;
 }
 // --------------------nav end----------------------
 
@@ -143,8 +143,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-bottom: 12rem;
-      // padding: 0 3rem;
+      // padding-bottom: 12rem;
+      padding: 0 3rem 12rem 3rem;
     }
   }
   &__title {
@@ -352,8 +352,9 @@ body {
   }
   .inner {
     height: 100%;
-    padding-top: 12.7rem;
-    padding-bottom: 20.4rem;
+    // padding-top: 12.7rem;
+    // padding-bottom: 20.4rem;
+    padding: 12.7rem 2rem 20.4rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -468,7 +469,7 @@ body {
   height: 100%;
   .inner {
     max-width: 152rem;
-    padding: 5.5rem 0 11.5rem 0;
+    padding: 5.5rem 3rem 11.5rem 3rem;
   }
   &__title {
     text-align: left;
@@ -487,7 +488,8 @@ body {
   &__img {
     background-image: url(../img/about__img.png);
     background-size: cover;
-    width: 152rem;
+    // width: 152rem;
+    width: 100%;
     height: 42.2rem;
     display: flex;
     justify-content: center;
@@ -522,7 +524,8 @@ body {
   height: 100%;
   .inner {
     max-width: 152rem;
-    padding-bottom: 18rem;
+    // padding-bottom: 18rem;
+    padding: 0 3rem 18rem 3rem;
   }
   &-title {
     color: #172b3a;
@@ -543,14 +546,18 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-
   li {
     font-size: 1.6rem;
     color: #8d8c8c;
     margin-right: 3rem;
     cursor: pointer;
     &::after {
-      content: "\00B7";
+      content: "";
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 100%;
+      background-color: #dbdbdb;
       margin-left: 3rem;
     }
     &:last-child::after {
@@ -613,6 +620,7 @@ body {
   }
   .active {
     display: flex;
+    justify-content: center;
   }
 }
 .selected {
@@ -707,7 +715,8 @@ body {
   width: 100vw;
   height: 100%;
   .inner {
-    padding-bottom: 15rem;
+    // padding-bottom: 15rem;
+    padding: 0 3rem 15rem 3rem;
     max-width: 152rem;
   }
   .subpage__title {
@@ -816,16 +825,17 @@ section.notice {
 
 //------------------------contact start-------------------------
 .contact__nav {
+  // background-color: transparent;
+  background-color: #f0f9ff;
   width: 100%;
   height: 9.3rem;
   position: fixed;
-  background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem;
+    padding: 1.2rem 3rem;
   }
   &__logo {
     width: 14.9rem;
@@ -841,8 +851,8 @@ section.notice {
 .contact {
   background-color: #f0f9ff;
   .inner {
-    padding: 9.6rem 0;
-    max-width: 152rem;
+    padding: 9.6rem 3rem;
+    // max-width: 152rem;
   }
   &__title {
     text-align: left;
@@ -883,17 +893,6 @@ section.notice {
     }
   }
   .about__us {
-    &-01 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #172b3a;
-    }
-    &-02 {
-      margin-top: 1.8rem;
-      font-size: 1.6rem;
-      line-height: 2.7rem;
-      color: #5e5e5e;
-    }
     &::before {
       content: "ㅡ";
       color: $main__point-color;
@@ -915,6 +914,29 @@ section.notice {
   background-color: white;
 }
 //------------------------contact end-------------------------
+@media screen and (max-width: 1450px) {
+  .vision__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10.4rem;
+    &-container {
+      width: 53.4rem;
+      height: 30.5rem;
+      font-size: 2.2rem;
+      &:nth-of-type(1) {
+        position: relative;
+      }
+      &:nth-of-type(2) {
+        position: relative;
+        margin-top: 4.5rem;
+      }
+      &:nth-of-type(3) {
+        position: relative;
+        margin-top: 4.5rem;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 992px) {
   .inner {
@@ -985,27 +1007,7 @@ section.notice {
       padding-bottom: 8rem;
     }
   }
-  .vision__content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10.4rem;
-    &-container {
-      width: 53.4rem;
-      height: 30.5rem;
-      font-size: 2.2rem;
-      &:nth-of-type(1) {
-        position: relative;
-      }
-      &:nth-of-type(2) {
-        position: relative;
-        margin-top: 4.5rem;
-      }
-      &:nth-of-type(3) {
-        position: relative;
-        margin-top: 4.5rem;
-      }
-    }
-  }
+
   .products {
     background : {
       image: url(../img/products__bg__992.png);
@@ -1148,8 +1150,298 @@ section.notice {
   .contact__title {
     font-size: 3.2rem;
     line-height: 6rem;
+    width: 100%;
   }
   .contact__us {
     margin-right: 11.4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav {
+    height: 6.5rem;
+    .inner {
+      padding: 0 2rem;
+      height: 6.5rem;
+      .nav__logo {
+        width: 11.2rem;
+        height: 5.1rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .menu__top {
+    .inner {
+      padding: 0 2rem;
+    }
+  }
+  .fixed__nav-space {
+    height: 6.5rem;
+  }
+  .main {
+    .inner {
+      padding: 3.6rem 2rem 9.4rem 2rem;
+    }
+    &__title {
+      font-size: 4.6rem;
+    }
+    &__text {
+      margin-top: 2.2rem;
+    }
+    &__slide {
+      margin-top: 3.4rem;
+    }
+    .slide {
+      &:nth-child(1) {
+        background: {
+          image: url(../img/main_slider01__576.png);
+        }
+      }
+      &:nth-child(2) {
+        background: {
+          image: url(../img/main_slider02__576.png);
+        }
+      }
+      &:nth-child(3) {
+        background: {
+          image: url(../img/main_slider03__576.png);
+        }
+      }
+    }
+  }
+  .prevArrow,
+  .nextArrow {
+    position: absolute;
+    bottom: -12%;
+  }
+  .prevArrow {
+    right: 12%;
+  }
+
+  .vision {
+    .inner {
+      padding: 0 2rem 6rem 2rem;
+    }
+    &__title {
+      font-size: 4.2rem;
+    }
+    &__text {
+      width: 27rem;
+    }
+    &__btn {
+      width: 15.6rem;
+      height: 4.4rem;
+      font-size: 1.6rem;
+      font-weight: 200;
+    }
+    &__content {
+      margin-top: 6.6rem;
+    }
+  }
+  .products {
+    background-image: url(../img/products__bg__576.png);
+    height: 100%;
+    .inner {
+      padding: 7rem 2rem 15.7rem 2rem;
+    }
+    &__title {
+      line-height: 4.6rem;
+    }
+    &__card {
+      width: 26rem;
+      height: 20.5rem;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+      &-title {
+        font-size: 2rem;
+      }
+      &-detail {
+        font-size: 1.4rem;
+        margin-top: 1.2rem;
+        font-weight: 200;
+      }
+    }
+    &__content {
+      margin-top: 6.5rem;
+      justify-content: space-between;
+    }
+  }
+  .footer {
+    .inner {
+      padding: 7rem 2rem;
+    }
+    &__title {
+      font-size: 3.9rem;
+      line-height: 5.6rem;
+    }
+    &__content {
+      font-size: 1.6rem;
+      margin-top: 2.3rem;
+      &-right {
+        margin-top: 14.2rem;
+      }
+    }
+  }
+
+  .menu__top {
+    height: 6.5rem;
+    .inner {
+      padding: 0 2rem;
+      height: 6.5rem;
+    }
+  }
+  .menu__logo {
+    width: 11.2rem;
+    height: 5.1rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menu__content {
+    .inner {
+      margin-top: 8.6rem;
+    }
+  }
+
+  .about {
+    .inner {
+      padding: 6.2rem 2rem 11.2rem 2rem;
+    }
+    &__title-bottom {
+      font-size: 4.6rem;
+    }
+    &__img {
+      margin-top: 5.4rem;
+      background-image: url(../img/about__img__576.png);
+      &-text {
+        font-size: 3.8rem;
+        line-height: 5.5rem;
+      }
+    }
+  }
+  .product__page {
+    .inner {
+      padding: 5rem 2rem 13rem 2rem;
+    }
+    &-menu {
+      margin-top: 4.2rem;
+    }
+  }
+  .tabmenu {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      text-align: center;
+      line-height: 3.4rem;
+    }
+  }
+  .tabmenu__wrapper {
+    margin-top: 5rem;
+    .card-wrapper {
+      &:hover .card-text {
+        padding: 4rem;
+        & p:nth-child(1) {
+          font-size: 1.6rem;
+        }
+        & p:nth-child(2) {
+          font-size: 1rem;
+        }
+        & p:nth-child(3) {
+          font-size: 0.9rem;
+          margin-top: 1.7rem;
+        }
+      }
+      &:hover .card-filter {
+        width: 26rem;
+        height: 26rem;
+      }
+    }
+    img {
+      width: 26rem;
+      height: 26rem;
+    }
+    .active {
+      justify-content: space-between;
+    }
+  }
+  .product__detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .product__detail-img {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    img {
+      width: 43.3rem;
+      height: 38rem;
+    }
+  }
+  .product__detail-content {
+    margin-top: 5rem;
+  }
+  .detail__title {
+    display: none;
+  }
+  .notice {
+    .inner {
+      padding: 7.1rem 2rem 13rem 2rem;
+    }
+  }
+  table.board-table {
+    margin-top: 4rem;
+  }
+
+  .contact__nav {
+    height: 6.5rem;
+    .inner {
+      padding: 0 2rem;
+      height: 6.5rem;
+      .nav__logo {
+        width: 11.2rem;
+        height: 5.1rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .fixed__nav-space {
+    height: 6.5rem;
+  }
+  .contact {
+    .inner {
+      padding: 6.2rem 2rem 13rem 2rem;
+    }
+    &__title {
+      font-size: 2.8rem;
+      line-height: 4rem;
+      max-width: 48rem;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+    &__us {
+      margin-right: 0;
+      &::before {
+        font-size: 4rem;
+      }
+    }
+    .about__us {
+      margin-top: 4rem;
+      &::before {
+        font-size: 4rem;
+      }
+    }
+  }
+  #contact__box {
+    margin-top: 2.2rem;
+    height: 42.4rem;
   }
 }
