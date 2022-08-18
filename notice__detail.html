@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
     <title>Document</title>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./main.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script defer src="./main.js"></script>
 </head>
 
 <body>
@@ -38,10 +37,10 @@
                     <a href="./product__page.html">
                         <li>Products</li>
                     </a>
-                    <a href="./notice.html">
+                    <a href="#">
                         <li>FAQ</li>
                     </a>
-                    <a href="#">
+                    <a href="./contact.html">
                         <li>Contact</li>
                     </a>
                 </ul>
@@ -56,7 +55,7 @@
             </div>
         </div>
     </section>
-    <nav class="contact__nav">
+    <nav class="nav">
         <div class="inner">
             <a href="index.html">
                 <div class="nav__logo"><img src="./img/logo.png" alt=""></div>
@@ -64,48 +63,20 @@
             <div class="nav__menu"><img src="./img/nav__btn.png" alt=""></div>
         </div>
     </nav>
-    <section class="contact">
+    <section class="notice__detail">
         <div class="fixed__nav-space"></div>
         <div class="inner">
-            <p class="contact__title">블루버드는 고객 만족을 극대화 할 수 있는 서비스와
-                제품을 공급하기 위해 앞으로도 최선의 노력을 다할것입니다.</p>
-            <div class="contact__info">
-                <div class="contact__us">
-                    <p class="contact__us-01">CONTACT US</p>
-                    <p class="contact__us-02">전라남도 여수시 삼동3길 17 여수산학융합원 6층</p>
-                    <p class="contact__us-03">FAX. 061 659 7799 TEL. 010 9127 8950 <br> E-MAIL.
-                        together_bluebird@outlook.com</p>
-                </div>
-                <div class="about__us">
-                    <p class="contact__us-01">ABOUT</p>
-                    <p class="contact__us-02">레벨, 유량, 수질, 온도, 압력, 가스, 분진, 농도</p>
-                    <p class="contact__us-03">계측분석장비의 솔루션계측기 판매, 현장서비스<br>
-                        전문업체로 산업현장의 다양한 경험과 기술을<br>
-                        축적하였습니다.</p>
-                </div>
+            <div class="notice__detail-title">
+                <p class="notice__detail-title--top">회사의 브랜드 가이드에 맞게 주문제작이 가능한가요?</p>
+                <p class="notice__detail-title--bottom">2022 - 00 - 00</p>
+                <hr>
             </div>
-            <hr>
-            <div id="contact__box"></div>
-            <script type="text/javascript"
-                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6bb8e8c9b35d5da7a2a741d0079743ae"></script>
-            <script>
-                var mapContainer = document.getElementById('contact__box'), // 지도를 표시할 div 
-                    mapOption = {
-                        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                        level: 3 // 지도의 확대 레벨
-                    };
-                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-                // 마커가 표시될 위치입니다 
-                var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-                // 마커를 생성합니다
-                var marker = new kakao.maps.Marker({
-                    position: markerPosition
-                });
-                // 마커가 지도 위에 표시되도록 설정합니다
-                marker.setMap(map);
-                        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-                        // marker.setMap(null);    
-            </script>
+            <div class="notice__detail-text">
+                <p class="notice__detail-text-content"></p>
+            </div>
+            <a href="./notice.html"><button class="notice__detail-btn">목록</button>
+            </a>
+        </div>
         </div>
     </section>
     <section class="footer">
@@ -145,6 +116,9 @@
             </div>
         </footer>
     </section>
+    <script>
+        location.href = "#tab1";
+    </script>
 </body>
 
 </html>
