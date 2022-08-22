@@ -75,16 +75,16 @@
                 </div>
                 <div class="product__page-menu">
                     <ul class="tabmenu">
-                        <li data-index="0" class="selected">유랑계</li>
-                        <li data-index="1">레벨계</li>
-                        <li data-index="2">수질분석계</li>
-                        <li data-index="3">온도계</li>
-                        <li data-index="4">압력</li>
-                        <li data-index="5">가스</li>
-                        <li data-index="6">분진</li>
+                        <li id="tab-menu1" class="selected"> <a href="#tab-menu1">유랑계</a></li>
+                        <li id="tab-menu2"> <a href="#tab-menu2">레벨계</a></li>
+                        <li id="tab-menu3"> <a href="#tab-menu3">수질분석계</a></li>
+                        <li id="tab-menu4"> <a href="#tab-menu4">온도계</a></li>
+                        <li id="tab-menu5"> <a href="#tab-menu5">압력</a></li>
+                        <li id="tab-menu6"> <a href="#tab-menu6">가스</a></li>
+                        <li id="tab-menu7"> <a href="#tab-menu7">분진</a></li>
                     </ul>
                     <div class="tabmenu__wrapper">
-                        <div class="tabmenu__wrap active" data-index="0">
+                        <div class="tabmenu__wrap active" id="tab-menu1">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
@@ -97,13 +97,16 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="tabmenu__wrap" data-index="1">
+                        <div class="tabmenu__wrap" id="tab-menu2">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
-                                        <p>HYPERVISC</p>
+                                        <p>2</p>
+                                        <p>22222222</p>
+                                        <p>2222222222222</p>
+                                        <!-- <p>HYPERVISC</p>
                                         <p>Hydramotion</p>
-                                        <p>PVT 정밀 점도계</p>
+                                        <p>PVT 정밀 점도계</p> -->
                                     </div>
                                     <div class="card-filter"></div>
                                     <img src="./img/product-1.png" class="card-img" alt="" />
@@ -142,43 +145,6 @@
                                     <img src="./img/product-1.png" class="card-img" alt="" />
                                 </a>
                             </div>
-                            <div class="card-wrapper">
-                                <a href="product__detail.html">
-                                    <div class="card-text">
-                                        <p>HYPERVISC</p>
-                                        <p>Hydramotion</p>
-                                        <p>PVT 정밀 점도계</p>
-                                    </div>
-                                    <div class="card-filter"></div>
-                                    <img src="./img/product-1.png" class="card-img" alt="" />
-                                </a>
-                            </div>
-                            <div class="card-wrapper">
-                                <a href="product__detail.html">
-                                    <div class="card-text">
-                                        <p>HYPERVISC</p>
-                                        <p>Hydramotion</p>
-                                        <p>PVT 정밀 점도계</p>
-                                    </div>
-                                    <div class="card-filter"></div>
-                                    <img src="./img/product-1.png" class="card-img" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tabmenu__wrap" data-index="2">
-                            <div class="card-wrapper">
-                                <a href="product__detail.html">
-                                    <div class="card-text">
-                                        <p>HYPERVISC</p>
-                                        <p>Hydramotion</p>
-                                        <p>PVT 정밀 점도계</p>
-                                    </div>
-                                    <div class="card-filter"></div>
-                                    <img src="./img/product-1.png" class="card-img" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tabmenu__wrap" data-index="3">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
@@ -202,7 +168,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="tabmenu__wrap" data-index="4">
+                        <div class="tabmenu__wrap" id="tab-menu3">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
@@ -215,7 +181,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="tabmenu__wrap" data-index="5">
+                        <div class="tabmenu__wrap" id="tab-menu4">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
@@ -239,7 +205,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="tabmenu__wrap" data-index="6">
+                        <div class="tabmenu__wrap" id="tab-menu5">
                             <div class="card-wrapper">
                                 <a href="product__detail.html">
                                     <div class="card-text">
@@ -252,31 +218,68 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="tabmenu__wrap" data-index="1"></div>
-                        <div class="tabmenu__wrap" data-index="2"></div>
-                        <div class="tabmenu__wrap" data-index="3"></div>
-                        <div class="tabmenu__wrap" data-index="4"></div>
-                        <div class="tabmenu__wrap" data-index="5"></div>
-                        <div class="tabmenu__wrap" data-index="6"></div>
-                    </div>
-                    <div class="products__foot">
-                        <tr>
-                            <td colspan="4">
-                                <span class="arrow radius-left">
-                                    < </span>
+                        <div class="tabmenu__wrap" id="tab-menu6">
+                            <div class="card-wrapper">
+                                <a href="product__detail.html">
+                                    <div class="card-text">
+                                        <p>HYPERVISC</p>
+                                        <p>Hydramotion</p>
+                                        <p>PVT 정밀 점도계</p>
+                                    </div>
+                                    <div class="card-filter"></div>
+                                    <img src="./img/product-1.png" class="card-img" alt="" />
+                                </a>
+                            </div>
+                            <div class="card-wrapper">
+                                <a href="product__detail.html">
+                                    <div class="card-text">
+                                        <p>HYPERVISC</p>
+                                        <p>Hydramotion</p>
+                                        <p>PVT 정밀 점도계</p>
+                                    </div>
+                                    <div class="card-filter"></div>
+                                    <img src="./img/product-1.png" class="card-img" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tabmenu__wrap" id="tab-menu7">
+                            <div class="card-wrapper">
+                                <a href="product__detail.html">
+                                    <div class="card-text">
+                                        <p>HYPERVISC</p>
+                                        <p>Hydramotion</p>
+                                        <p>PVT 정밀 점도계</p>
+                                    </div>
+                                    <div class="card-filter"></div>
+                                    <img src="./img/product-1.png" class="card-img" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tabmenu__wrap" </div>
+                            <div class="tabmenu__wrap" </div>
+                                <div class="tabmenu__wrap" </div>
+                                    <div class="tabmenu__wrap" </div>
+                                        <div class="tabmenu__wrap" </div>
+                                            <div class="tabmenu__wrap" </div>
+                                            </div>
+                                            <div class="products__foot">
+                                                <tr>
+                                                    <td colspan="4">
+                                                        <span class="arrow radius-left">
+                                                            < </span>
 
-                                        <a href="javascript:;" class="txt_point">1</a>
-                                        <a href="javascript:;">2</a>
-                                        <a href="javascript:;">3</a>
-                                        <a href="javascript:;">4</a>
-                                        <a href="javascript:;">5</a>
-                                        <span class="arrow radius-right">＞</span>
-                            </td>
-                        </tr>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                                <a href="javascript:;" class="txt_point">1</a>
+                                                                <a href="javascript:;">2</a>
+                                                                <a href="javascript:;">3</a>
+                                                                <a href="javascript:;">4</a>
+                                                                <a href="javascript:;">5</a>
+                                                                <span class="arrow radius-right">＞</span>
+                                                    </td>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
     </section>
     <section class="footer">
         <footer>
@@ -315,6 +318,7 @@
             </div>
         </footer>
     </section>
+    <script defer src="./script.js"></script>
     <!-- <script>
         location.href = "#tab1";
     </script> -->

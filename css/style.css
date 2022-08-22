@@ -494,9 +494,11 @@ body {
 }
 .tabmenu li {
   font-size: 1.6rem;
-  color: #8d8c8c;
   margin-right: 3rem;
   cursor: pointer;
+}
+.tabmenu li a {
+  color: #8d8c8c;
 }
 .tabmenu li::after {
   content: "";
@@ -516,7 +518,7 @@ body {
 }
 .tabmenu__wrapper .card-wrapper a {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
   color: white;
   text-decoration: none;
@@ -558,18 +560,12 @@ body {
   position: absolute;
 }
 .tabmenu__wrapper .tabmenu__wrap {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 .tabmenu__wrapper .active {
   display: flex;
-  justify-content: center;
-}
-
-.selected {
-  font-weight: 600;
-  color: black;
 }
 
 .products__foot {
@@ -645,7 +641,8 @@ body {
   font-weight: 700;
 }
 
-.tabmenu li.selected {
+.tabmenu li.selected a {
+  font-weight: 600;
   color: black;
 }
 
@@ -919,6 +916,14 @@ section.notice {
   .vision__content-container:nth-of-type(3) {
     position: relative;
     margin-top: 4.5rem;
+  }
+  .tabmenu__wrapper .tabmenu__wrap {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1155px) {
+  .tabmenu__wrapper .tabmenu__wrap {
+    justify-content: center;
   }
 }
 @media screen and (max-width: 992px) {

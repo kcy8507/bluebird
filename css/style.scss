@@ -548,9 +548,11 @@ body {
   justify-content: center;
   li {
     font-size: 1.6rem;
-    color: #8d8c8c;
     margin-right: 3rem;
     cursor: pointer;
+    a {
+      color: #8d8c8c;
+    }
     &::after {
       content: "";
       display: inline-block;
@@ -565,12 +567,14 @@ body {
     }
   }
 }
+
 .tabmenu__wrapper {
   margin-top: 5rem;
   .card-wrapper {
     a {
       display: flex;
-      justify-content: flex-end;
+      // justify-content: flex-end;
+      justify-content: flex-start;
       align-items: flex-end;
       color: white;
       text-decoration: none;
@@ -613,20 +617,17 @@ body {
     position: absolute;
   }
   .tabmenu__wrap {
-    // display: flex;
-    display: none;
+    display: flex;
+    // display: none;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
   .active {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
   }
 }
-.selected {
-  font-weight: 600;
-  color: black;
-}
+
 .products__foot {
   margin-top: 6.3rem;
   font-size: 2rem;
@@ -701,7 +702,10 @@ body {
   }
 }
 .tabmenu li.selected {
-  color: black;
+  a {
+    font-weight: 600;
+    color: black;
+  }
 }
 // .detail__list-disc {
 //   li {
@@ -983,8 +987,20 @@ section.notice {
       }
     }
   }
+  .tabmenu__wrapper {
+    .tabmenu__wrap {
+      justify-content: space-between;
+    }
+  }
 }
 
+@media screen and (max-width: 1155px) {
+  .tabmenu__wrapper {
+    .tabmenu__wrap {
+      justify-content: center;
+    }
+  }
+}
 @media screen and (max-width: 992px) {
   .inner {
     max-width: 94.4rem;
@@ -1118,6 +1134,7 @@ section.notice {
 
   .tabmenu__wrapper {
     margin-top: 8.4rem;
+
     .card-wrapper {
       &:hover .card-text {
         padding: 3.8rem;
