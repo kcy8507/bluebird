@@ -1447,7 +1447,7 @@ section.notice {
     height: 100%;
   }
   .main__title {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
   }
   .main__text {
     line-height: 2.5rem;
@@ -1473,6 +1473,7 @@ section.notice {
   }
   .vision__btn {
     width: 9.6rem;
+    top: 12rem;
   }
   .products__content {
     margin-top: 6.5rem;
