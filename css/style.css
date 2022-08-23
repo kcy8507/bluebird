@@ -126,7 +126,7 @@ body {
 
 .main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .main__title-container .inner {
   text-align: right;
@@ -219,7 +219,7 @@ body {
 }
 
 .vision .inner {
-  padding: 0 3rem 24.1rem 3rem;
+  padding: 10rem 3rem 24.1rem 3rem;
   height: 100%;
 }
 .vision__title-container {
@@ -513,6 +513,37 @@ body {
   display: none;
 }
 
+.show {
+  display: flex;
+}
+
+.tab-menu2_1 {
+  margin-top: 0.7rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.2rem;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.26);
+  background-color: #fff;
+  display: none;
+}
+.tab-menu2_1 span {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  margin-right: 0;
+}
+.tab-menu2_1 span::after {
+  display: none;
+}
+.tab-menu2_1 span a {
+  text-align: center;
+  color: #636363 !important;
+}
+
 .tabmenu__wrapper {
   margin-top: 5rem;
 }
@@ -644,6 +675,9 @@ body {
 .tabmenu li.selected a {
   font-weight: 600;
   color: black;
+}
+.tabmenu li.selected ul span {
+  color: #636363;
 }
 
 .notice {
@@ -808,7 +842,7 @@ section.notice {
 }
 
 .contact__nav {
-  background-color: #f0f9ff;
+  background-color: transparent;
   width: 100%;
   height: 9.3rem;
   position: fixed;
@@ -1111,6 +1145,20 @@ section.notice {
     margin-right: 11.4rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .products {
+    height: 100%;
+  }
+  .vision__btn {
+    width: 13.7rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .products__content {
+    margin-top: 6.5rem;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 576px) {
   .nav {
     height: 6.5rem;
@@ -1206,7 +1254,6 @@ section.notice {
   }
   .products__content {
     margin-top: 6.5rem;
-    justify-content: space-between;
   }
   .footer .inner {
     padding: 7rem 2rem;
@@ -1294,6 +1341,13 @@ section.notice {
   }
   .tabmenu__wrapper .active {
     justify-content: space-between;
+  }
+  .tab-menu2_1 {
+    margin-top: 0;
+    padding: 1rem 2.2rem;
+  }
+  .tab-menu2_1 span {
+    line-height: 1.3rem;
   }
   .product__detail-container {
     display: flex;
@@ -1386,5 +1440,49 @@ section.notice {
   #contact__box {
     margin-top: 2.2rem;
     height: 42.4rem;
+  }
+}
+@media screen and (max-width: 527px) {
+  .main {
+    height: 100%;
+  }
+  .main__title {
+    font-size: 3.8rem;
+  }
+  .main__text {
+    line-height: 2.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .vision .inner {
+    padding: 6rem 2rem 6rem 2rem;
+  }
+  .vision__content-container {
+    width: 100%;
+  }
+  .prevArrow {
+    right: 19%;
+  }
+  .vision__title {
+    font-size: 3.8rem;
+  }
+  .vision__text {
+    line-height: 2.6rem;
+    margin-top: 1.1rem;
+    font-size: 1.6rem;
+  }
+  .vision__btn {
+    width: 9.6rem;
+  }
+  .products__content {
+    margin-top: 6.5rem;
+    justify-content: center;
+  }
+  .products__title {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+  .tabmenu__wrapper .active {
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

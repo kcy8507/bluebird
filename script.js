@@ -1,7 +1,27 @@
 let tabMenu = $(".tabmenu li"),
   tabContent = $(".tabmenu__wrap"),
   currentUrl = location.href; //현재 주소표시줄 주소 확인
-console.log(currentUrl);
+
+let dropdown = $(".dropdown");
+let dropdownMenu = $(".tab-menu2_1");
+let other = $(".product__page-container");
+
+// $(document).ready(function () {
+dropdown.click(function (e) {
+  e.stopPropagation();
+  e.preventDefault();
+  dropdownMenu.slideToggle(100);
+  console.log("메뉴 나타난다");
+});
+
+$(document).on("click", function (e) {
+  // console.log(e.target);
+  // if (other.is(e.target) || $("#tab-menu1").is(e.target)) {
+  dropdownMenu.hide();
+  console.log("메뉴 사라짐");
+  // }
+});
+// });
 
 tabMenu.each(function () {
   let targetStr = $(this).find("a").attr("href");
@@ -29,12 +49,4 @@ function activateTab(idx) {
 
   tabContent.hide();
   tabContent.eq(idx).show();
-
-  //   tabContent.each(function (i) {
-  //     tabContent.find("a").removeClass("active");
-  //     tabContent.eq(i).find("a").addClass("active");
-
-  //     tabContent.hide();
-  //     tabContent.eq(i).show();
-  //   });
 }
