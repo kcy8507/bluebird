@@ -11,14 +11,12 @@ dropdown.click(function (e) {
   e.stopPropagation();
   e.preventDefault();
   dropdownMenu.slideToggle(100);
-  console.log("메뉴 나타난다");
 });
 
 $(document).on("click", function (e) {
   // console.log(e.target);
   // if (other.is(e.target) || $("#tab-menu1").is(e.target)) {
   dropdownMenu.hide();
-  console.log("메뉴 사라짐");
   // }
 });
 // });
@@ -36,7 +34,8 @@ tabMenu.each(function () {
 });
 
 tabMenu.click(function (e) {
-  e.preventDefault();
+  // e.preventDefault();
+  //이벤트를 막아줌
   activateTab($(this).index());
 });
 
