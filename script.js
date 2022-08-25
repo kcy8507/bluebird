@@ -25,7 +25,6 @@ tabMenu.each(function () {
   let targetStr = $(this).find("a").attr("href");
   if (currentUrl.indexOf(targetStr) > -1) {
     let targetIdx = $(this).index();
-
     activateTab(targetIdx);
   }
   if (currentUrl.indexOf("#") == -1) {
@@ -33,10 +32,28 @@ tabMenu.each(function () {
   }
 });
 
+console.log(currentUrl);
+
 tabMenu.click(function (e) {
-  // e.preventDefault();
-  //이벤트를 막아줌
-  activateTab($(this).index());
+  let targetIdx = $(this).index();
+  e.preventDefault();
+  // 이벤트를 막아줌
+  activateTab(targetIdx);
+  console.log(tabContent.eq(targetIdx));
+
+  if (currentUrl.indexOf("detail") > -1) {
+    console.log("detail");
+    //   // $(location).attr("href", `product__page.html`);
+    //   // location.href = `product__page.html`;
+    //   console.log("fff");
+    window.location.replace(`../product__page.html`);
+    let targetIdx = $(this).index();
+    e.preventDefault();
+    // 이벤트를 막아줌
+    activateTab(targetIdx);
+    console.log(tabContent.eq(targetIdx));
+    //   // $("body").css("backgroundColor", "red");
+  }
 });
 
 function activateTab(idx) {
