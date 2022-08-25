@@ -35,15 +35,19 @@ activateTab(0);
 // });
 
 tabMenu.click(function (e) {
-  let targetIdx = $(this).index();
-  e.preventDefault();
-  // 이벤트를 막아줌
-  activateTab(targetIdx);
   if (currentUrl.indexOf("detail") > -1) {
-    console.log("detail");
-
-    window.location.replace(`../product__page.html`);
+    // window.location.replace(`../product__page.html`);
+    // location.href = `product__page.html#tab-menu${targetIdx + 1}`;
+    e.preventDefault();
     let targetIdx = $(this).index();
+    location.href = `product__page.html`;
+    console.log(targetIdx);
+    activateTab(targetIdx);
+  } else {
+    let targetIdx = $(this).index();
+    console.log(targetIdx);
+    e.preventDefault();
+    // 이벤트를 막아줌
     activateTab(targetIdx);
   }
 });
