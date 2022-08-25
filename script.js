@@ -6,6 +6,30 @@ let dropdown = $(".dropdown");
 let dropdownMenu = $(".tab-menu2_1");
 let other = $(".product__page-container");
 
+$(function () {
+  if (window.location.hash === "#0") {
+    activateTab(0);
+  }
+  if (window.location.hash === "#1") {
+    activateTab(1);
+  }
+  if (window.location.hash === "#2") {
+    activateTab(2);
+  }
+  if (window.location.hash === "#3") {
+    activateTab(3);
+  }
+  if (window.location.hash === "#4") {
+    activateTab(4);
+  }
+  if (window.location.hash === "#5") {
+    activateTab(5);
+  }
+  if (window.location.hash === "#6") {
+    activateTab(6);
+  }
+});
+
 dropdown.click(function (e) {
   e.stopPropagation();
   e.preventDefault();
@@ -40,12 +64,10 @@ tabMenu.click(function (e) {
     // location.href = `product__page.html#tab-menu${targetIdx + 1}`;
     e.preventDefault();
     let targetIdx = $(this).index();
-    location.href = `product__page.html`;
-    console.log(targetIdx);
-    activateTab(targetIdx);
+    location.href = `product__page.html#${targetIdx}`;
+    // activateTab(targetIdx);
   } else {
     let targetIdx = $(this).index();
-    console.log(targetIdx);
     e.preventDefault();
     // 이벤트를 막아줌
     activateTab(targetIdx);
