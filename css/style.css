@@ -496,6 +496,8 @@ body {
   font-size: 1.6rem;
   margin-right: 3rem;
   cursor: pointer;
+}
+.tabmenu li a {
   color: #8d8c8c;
 }
 .tabmenu li::after {
@@ -528,17 +530,17 @@ body {
   background-color: #fff;
   display: none;
 }
-.tab-menu2_1 span {
+.tab-menu2_1 a span {
   display: block;
   text-align: center;
   font-size: 1.5rem;
   margin-top: 0.8rem;
   margin-right: 0;
 }
-.tab-menu2_1 span::after {
+.tab-menu2_1 a span::after {
   display: none;
 }
-.tab-menu2_1 span a {
+.tab-menu2_1 a a {
   text-align: center;
   color: #636363 !important;
 }
@@ -686,9 +688,11 @@ body {
 
 .tabmenu li.selected {
   font-weight: 600;
+}
+.tabmenu li.selected a {
   color: black;
 }
-.tabmenu li.selected ul span {
+.tabmenu li.selected ul a span {
   color: #636363;
 }
 
@@ -1422,7 +1426,7 @@ section.notice {
     margin-top: 0;
     padding: 1rem 2.2rem;
   }
-  .tab-menu2_1 span {
+  .tab-menu2_1 a span {
     line-height: 1.3rem;
   }
   .notice .inner {

@@ -550,7 +550,9 @@ body {
     font-size: 1.6rem;
     margin-right: 3rem;
     cursor: pointer;
-    color: #8d8c8c;
+    a {
+      color: #8d8c8c;
+    }
     &::after {
       content: "";
       display: inline-block;
@@ -584,14 +586,16 @@ body {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.26);
   background-color: #fff;
   display: none;
-  span {
-    display: block;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 0.8rem;
-    margin-right: 0;
-    &::after {
-      display: none;
+  a {
+    span {
+      display: block;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 0.8rem;
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
     }
     a {
       text-align: center;
@@ -753,10 +757,14 @@ body {
 }
 .tabmenu li.selected {
   font-weight: 600;
-  color: black;
+  a {
+    color: black;
+  }
   ul {
-    span {
-      color: #636363;
+    a {
+      span {
+        color: #636363;
+      }
     }
   }
 }
@@ -1592,8 +1600,10 @@ section.notice {
   .tab-menu2_1 {
     margin-top: 0;
     padding: 1rem 2.2rem;
-    span {
-      line-height: 1.3rem;
+    a {
+      span {
+        line-height: 1.3rem;
+      }
     }
   }
 
