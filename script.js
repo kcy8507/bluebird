@@ -1,57 +1,12 @@
 let tabMenu = $(".tabmenu li"),
-  tabContent = $(".tabmenu__wrapper").children(),
+  tabContent = $(".tabmenu__wrap"),
   currentUrl = location.href; //현재 주소표시줄 주소 확인
 
 let dropdown = $(".dropdown");
 let dropdownMenu = $(".tab-menu2_1");
 let other = $(".product__page-container");
 
-$(function () {
-  tabMenu.each(function (index, item) {
-    $(item).click(function (e) {
-      if (currentUrl.indexOf("detail") > -1) {
-        e.preventDefault();
-        location.href = `product__page.html#${index}`;
-      } else {
-        e.preventDefault();
-        // 이벤트를 막아줌
-        // location.href = `product__detail.html#${index}`;
-        activateTab(index);
-      }
-    });
-  });
-
-  tabContent.each(function (index, item) {
-    $(item).click(function (e) {
-      console.log(index);
-      e.preventDefault();
-      location.href = `product__detail.html#${index}`;
-    });
-  });
-
-  if (window.location.hash === "#0") {
-    activateTab(0);
-  }
-  if (window.location.hash === "#1") {
-    activateTab(1);
-  }
-  if (window.location.hash === "#2") {
-    activateTab(2);
-  }
-  if (window.location.hash === "#3") {
-    activateTab(3);
-  }
-  if (window.location.hash === "#4") {
-    activateTab(4);
-  }
-  if (window.location.hash === "#5") {
-    activateTab(5);
-  }
-  if (window.location.hash === "#6") {
-    activateTab(6);
-  }
-});
-
+// $(document).ready(function () {
 dropdown.click(function (e) {
   e.stopPropagation();
   e.preventDefault();
@@ -59,29 +14,34 @@ dropdown.click(function (e) {
 });
 
 $(document).on("click", function (e) {
+  // console.log(e.target);
+  // if (other.is(e.target) || $("#tab-menu1").is(e.target)) {
   dropdownMenu.hide();
+  // }
 });
-
-// activateTab(0);
-
-// tabMenu.click(function (e) {
-//   if (currentUrl.indexOf("detail") > -1) {
-//     e.preventDefault();
-//     let targetIdx = $(this).index();
-//     activateTab(2);
-
-//     location.href = `product__page.html#${targetIdx}`;
-//   } else {
-//     let targetIdx = $(this).index();
-//     e.preventDefault();
-//     // 이벤트를 막아줌
-//     activateTab(targetIdx);
-//   }
 // });
 
+tabMenu.each(function () {
+  let targetStr = $(this).find("a").attr("href");
+  if (currentUrl.indexOf(targetStr) > -1) {
+    let targetIdx = $(this).index();
+
+    activateTab(targetIdx);
+  }
+  if (currentUrl.indexOf("#") == -1) {
+    activateTab(0);
+  }
+});
+
+tabMenu.click(function (e) {
+  // e.preventDefault();
+  // 이벤트를 막아줌
+  activateTab($(this).index());
+});
+
 function activateTab(idx) {
-  tabContent.removeClass("active");
-  tabContent.eq(idx).addClass("active");
+  tabContent.find("a").removeClass("active");
+  tabContent.eq(idx).find("a").addClass("active");
 
   tabMenu.removeClass("selected");
   tabMenu.eq(idx).addClass("selected");
